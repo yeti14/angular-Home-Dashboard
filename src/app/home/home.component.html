@@ -1,0 +1,27 @@
+<div class="grid-container">
+  <mat-card layout="row" layout-align="center center" class='dashboard-card'>
+    <mat-card-header>
+      <mat-card-title>
+        {{today | date:'HH:mm'}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{today | date: 'fullDate'}}
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center" class="grid-container">
+  <mat-card layout="row" layout-align="center center" class='dashboard-card'>
+    <mat-card-header>
+        <img src='../assets/img/{{weatherInfo.icon}}.png'>
+    </mat-card-header>
+    <mat-card-header>
+      <mat-card-title>
+        {{weatherInfo.temperature | number:'2.1-1'}}º {{weatherInfo.humidity}}%
+      </mat-card-title>
+      <mat-card-subtitle>
+       <font size="1.5">{{weatherInfo.location}}</font>
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
