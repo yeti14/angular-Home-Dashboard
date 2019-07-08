@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatCardModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

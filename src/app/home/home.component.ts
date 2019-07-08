@@ -22,6 +22,21 @@ export class HomeComponent implements OnInit {
 
   }
 
+  getWeatherInfo() {
+
+      this.weatherService.getWeather().subscribe(data => {
+          this.weatherInfo = {
+            temperature : data.main.temp,
+            humidity: data.main.humidity,
+            location: data.name,
+            icon: data.weather[0].icon
+        }
+      });
+
+      console.log('call getWeatherInfo()');
+
+  }
+
 
   ngOnInit() {
 
@@ -29,19 +44,14 @@ export class HomeComponent implements OnInit {
           this.today = Date.now();
         }, 20000);
 
-    this.weatherService.getWeather().subscribe(data => {
-        this.weatherInfo = {
-          temperature : data.main.temp,
-          humidity: data.main.humidity,
-          location: data.name,
-          icon: data.weather[0].icon
-      }
-
-      console.log('prova: '+data.weather[0].icon);
-
-    });
+    this.getWeatherInfo();
+    setInterval(() => {
+         this.getWeatherInfo();
+    }, 60000);
 
  }
+
+
 
  getWeatherIcon():string {
 
