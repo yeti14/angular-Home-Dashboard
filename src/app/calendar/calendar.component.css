@@ -1,4 +1,12 @@
 .grid-container {
+  margin: 10px;
+}
+
+.calendar-card {
+  position: relative;
   max-width: 1000px;
-  background-color: #ededed
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
 }

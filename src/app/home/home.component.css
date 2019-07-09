@@ -5,12 +5,21 @@
 .dashboard-card {
   position: relative;
   max-width: 175px;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
 }
 
 .dashboard-card-content {
   text-align: center;
+}
+
+.calendar-card {
+  position: absolute;
+  max-width: 1000px;
+  top: 78px;
+  left: 240px;
+  right: 5px;
+  bottom: 5px;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {OpenWeatherMapService} from '../services/open-weather-map.service';
+import timeGridPlugin from '@fullcalendar/timegrid';
 
 
 @Component({
@@ -9,6 +10,7 @@ import {OpenWeatherMapService} from '../services/open-weather-map.service';
 })
 export class HomeComponent implements OnInit {
 
+   calendarPlugins=[timeGridPlugin];
    today: number = Date.now();
 
    weatherInfo = {
@@ -57,6 +59,13 @@ export class HomeComponent implements OnInit {
 
    return 'url(../assets/img/01d.png)';
 
+ }
+
+ getEvents() {
+   return [
+     { title: 'Agafar portatil', date: '2019-07-09 14:40:00' },
+     { title: 'Canviar collar gos', date: '2019-07-10 10:00:00' }
+   ]
  }
 
 
