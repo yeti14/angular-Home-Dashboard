@@ -27,6 +27,6 @@
 </div>
 <div class="grid-container">
   <mat-card layout="row" layout-align="center center" class='calendar-card'>
-    <full-calendar defaultView="timeGridWeek" [plugins]="calendarPlugins" [events]="getEvents()"></full-calendar>
+    <full-calendar defaultView="timeGridWeek" [firstDay]="1" [plugins]="calendarPlugins" [events]="eventsResult"></full-calendar>
   </mat-card>
 </div>

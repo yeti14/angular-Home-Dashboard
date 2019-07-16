@@ -1,5 +1,5 @@
 <div class="grid-container">
   <mat-card layout="row" layout-align="center center" class='calendar-card'>
-    <full-calendar defaultView="dayGridMonth" [plugins]="calendarPlugins"></full-calendar>
-  </mat-card>  
+    <full-calendar defaultView="dayGridMonth" [firstDay]="1" [plugins]="calendarPlugins" [events]="eventsResult"></full-calendar>
+  </mat-card>
 </div>

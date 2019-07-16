@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {OpenWeatherMapService} from '../services/open-weather-map.service';
+import {CalendarEventsService} from '../services/calendar-events.service';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 
@@ -20,7 +21,9 @@ export class HomeComponent implements OnInit {
      icon: ''
    }
 
-  constructor(private weatherService:OpenWeatherMapService) {
+   private eventsResult = [];
+
+  constructor(private weatherService:OpenWeatherMapService, private calendarEventsService:CalendarEventsService) {
 
   }
 
@@ -51,6 +54,8 @@ export class HomeComponent implements OnInit {
          this.getWeatherInfo();
     }, 60000);
 
+    this.getEvents();
+
  }
 
 
@@ -62,10 +67,14 @@ export class HomeComponent implements OnInit {
  }
 
  getEvents() {
-   return [
-     { title: 'Agafar portatil', date: '2019-07-09 14:40:00' },
-     { title: 'Canviar collar gos', date: '2019-07-10 10:00:00' }
-   ]
+
+   this.calendarEventsService.getEvents().subscribe((res : any[])=>{
+        console.log(res);
+        this.eventsResult = res;
+
+   });
+
+   return this.eventsResult;
  }
 
 
