@@ -12,6 +12,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { PhotoComponent } from './photo/photo.component';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     NavigationComponent,
     HomeComponent,
     WeatherComponent,
-    CalendarComponent
+    CalendarComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     MatCardModule,
     MatGridListModule,
     HttpClientModule,
-    FullCalendarModule
+    FullCalendarModule,
+    NgxGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

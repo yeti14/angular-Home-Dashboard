@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {WeatherComponent} from './weather/weather.component';
 import {CalendarComponent} from './calendar/calendar.component';
+import {PhotoComponent} from './photo/photo.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'calendar',
     component: CalendarComponent
+  },
+  {
+    path: 'photo',
+    component: PhotoComponent
   },
   { path: '',
    redirectTo: '/home',

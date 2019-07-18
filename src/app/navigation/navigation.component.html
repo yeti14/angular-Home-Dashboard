@@ -8,6 +8,8 @@
       <a mat-list-item [routerLink]="['/home']">Home</a>
       <a mat-list-item [routerLink]="['/calendar']">Calendar</a>
       <a mat-list-item [routerLink]="['/weather']">Weather Station</a>
+      <a mat-list-item [routerLink]="['/photo']">Photos Frame</a>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content [ngStyle]="{'background-image':getBackgroundImage()}">
@@ -23,8 +25,7 @@
       <span>HomeDashboard</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
   </mat-sidenav-content>
 </mat-sidenav-container>
