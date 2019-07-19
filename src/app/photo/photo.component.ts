@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+import {GalleryService} from '../services/gallery.service';
 
 @Component({
   selector: 'app-photo',
@@ -11,7 +12,7 @@ export class PhotoComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 
-  constructor() { }
+  constructor(private galleryService:GalleryService) { }
 
   ngOnInit() {
 
@@ -28,27 +29,11 @@ export class PhotoComponent implements OnInit {
 
         ];
 
-        this.galleryImages = [
-            {
-                small: 'assets/img/background1.jpg',
-                medium: 'assets/img/background1.jpg',
-                big: 'assets/img/background1.jpg'
-            },
-            {
-                small: 'assets/img/background2.jpg',
-                medium: 'assets/img/background2.jpg',
-                big: 'assets/img/background2.jpg'
-            },
-            {
-                small: 'assets/img/background3.jpg',
-                medium: 'assets/img/background3.jpg',
-                big: 'assets/img/background3.jpg'
-            }
-        ];
-  }
+        this.galleryService.getImages().subscribe((res : any[])=>{
+             this.galleryImages = res;
 
-  goHome() {
-    console.log("GO HOME");
+        });
+
   }
 
 }
