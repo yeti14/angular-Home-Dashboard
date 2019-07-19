@@ -17,29 +17,15 @@ export class PhotoComponent implements OnInit {
 
     this.galleryOptions = [
             {
-                width: '1024px',
-                height: '600px',
+                width: '100%',
+                height: '100%',
                 imageAnimation: NgxGalleryAnimation.Fade,
                 imageAutoPlay: true,
                 thumbnails: false,
                 imageAutoPlayInterval : 5000,
                 preview: false
-            },
-            // max-width 800
-            {
-                breakpoint: 800,
-                width: '100%',
-                height: '600px',
-                imagePercent: 80,
-                thumbnailsPercent: 20,
-                thumbnailsMargin: 20,
-                thumbnailMargin: 20
-            },
-            // max-width 400
-            {
-                breakpoint: 400,
-                preview: false
             }
+
         ];
 
         this.galleryImages = [
@@ -59,6 +45,10 @@ export class PhotoComponent implements OnInit {
                 big: 'assets/img/background3.jpg'
             }
         ];
+  }
+
+  goHome() {
+    console.log("GO HOME");
   }
 
 }
