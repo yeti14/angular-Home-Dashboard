@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
      icon: ''
    }
 
-   private eventsResult = [];
+   eventsResult = [];
 
   constructor(private weatherService:OpenWeatherMapService, private calendarEventsService:CalendarEventsService) {
 

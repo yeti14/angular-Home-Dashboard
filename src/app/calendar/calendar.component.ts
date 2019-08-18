@@ -9,7 +9,7 @@ import {CalendarEventsService} from '../services/calendar-events.service';
 })
 export class CalendarComponent implements OnInit {
 
-   private eventsResult = [];
+   eventsResult = [];
 
   constructor(private calendarEventsService:CalendarEventsService) { }
 
