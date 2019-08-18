@@ -23,7 +23,7 @@ export class PhotoComponent implements OnInit {
                 imageAnimation: NgxGalleryAnimation.Fade,
                 imageAutoPlay: true,
                 thumbnails: false,
-                imageAutoPlayInterval : 5000,
+                imageAutoPlayInterval : 20000,
                 preview: false
             }
 
