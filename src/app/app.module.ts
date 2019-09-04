@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { PhotoComponent } from './photo/photo.component';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { NgxGalleryModule } from 'ngx-gallery';
     MatGridListModule,
     HttpClientModule,
     FullCalendarModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

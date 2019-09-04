@@ -1,3 +1,18 @@
-<p>
-  weather works!
-</p>
+<div class="grid-container">
+  <mat-card layout="row" layout-align="center center" class='dashboard-card'>
+    <mat-card-header>
+      <mat-card-title>
+      Temperature
+      </mat-card-title>
+    </mat-card-header>
+    <google-chart #chart
+     [title]="title"
+     [type]="type"
+     [data]="data"
+     [columnNames]="columnNames"
+     [options]="options"
+     [width]="width"
+     [height]="height">
+   </google-chart>
+  </mat-card>
+</div>
